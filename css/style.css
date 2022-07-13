@@ -1,0 +1,188 @@
+
+
+/* --- NORMALIZE ---*/
+:root {
+    /* Colors */
+    --primary: #e6c611;
+    --secondary: #fafafa;
+    --alternative: #000000;
+    --text-color: #2B2B2B;
+
+    /* ----------Spacings*/
+    /* mobile*/ 
+    --spacing-large: 4vw;
+    --spacing-medium: 2vw;
+    --spacing-small: 1.5vw;
+    --spacing-xsmall: 0.1vw;
+   
+    /* Font-family */
+    --font-principal: 'Heebo', sans-serif;
+    --font-title: 'Lato', sans-serif;
+
+    /* ---------Font-Sizes */
+    /* mobile */
+    --text-large: 12vw;
+    --text-medium: 4vw;
+    --text-xmedium:8vw;
+    --text-base: 3.3vw;
+    --text-small: 3vw;
+
+    /* tablet & desktop */
+    --text-s: 1.3em;
+    --text-b: 1.5em;
+    --text-m: 1.7em;
+    --text-xm: 3.5em;
+    --text-l:  4.8em;
+}
+
+/*--- RESET ---*/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--alternative);
+}
+.main__container{
+    background-image: url(../sources/stars.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*HEADER*/
+.nav__img{
+    width: 20%;
+    margin-left: 30%;    
+}
+.navbar{
+    background-color: var(--alternative);
+}
+/*FOOTER*/
+footer{
+    display: grid;
+    grid-template-areas: "logo nav info";
+    background-color: var(--alternative);
+    
+}
+.footer__img{
+    grid-area: logo;
+    width: 40%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+}
+.footer__nav{
+    grid-area: nav;
+    align-self: center;
+    justify-self: center;
+}
+.footer__info{
+    grid-area: info;
+    align-self: center;
+    justify-self: center;
+    width: auto;
+}
+.footer__info h5{
+    color: var(--secondary);
+    text-align: center;
+    font-size: var(--text-medium);
+}
+.footer__info ul{
+    list-style-type: none;
+}
+.footer__info li{
+    text-decoration: none;    
+    color: var(--secondary);
+    padding: var(--spacing-xsmall);
+    font-size: var(--text-small);
+}
+/* CARDS*/
+.cards h1{
+    text-align: center;
+    color: var(--secondary);
+    padding: var(--spacing-large);
+    font-size: var(--text-large);
+    font-weight: bold;
+    font-family: var(--font-title);
+    
+}
+.cards__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: var(--spacing-medium);
+}
+.derechos{
+    text-align: center;
+    color: var(--secondary);
+    font-style: italic;
+    padding: var(--spacing-medium);
+    font-size: var(--text-small);
+}
+/*pagina REGISTRO*/
+.registro__container{
+    background-image: url(../sources/vader.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.registro__container h1{
+    text-align: center;
+    color: var(--secondary);
+    padding: var(--spacing-large);
+    font-size: var(--text-large);
+    font-weight: bold;
+    font-family: var(--font-title);
+    
+}
+.registro{
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    color: var(--secondary);
+    font-size: var(--text-small);    
+}
+.force{
+    text-align: center;
+    color: var(--primary);
+    font-size: var(--text-small);
+    font-style: italic;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+
+/* media query 480px min a 768 max */
+@media screen and (min-width: 480px){
+    .footer__info h5{        
+        font-size: var(--text-m);
+    }
+    .footer__info li{
+        font-size: var(--text-xs);
+    }
+    .cards h1{        
+        font-size: var(--text-l);
+    }
+    .derechos{        
+        font-size: var(--text-s);
+    }
+    .registro__container h1{
+        font-size: var(--text-l);
+    }
+    .registro{        
+        font-size: var(--text-s);
+    }
+    .force{
+        font-size: var(--text-s);
+    }
+}
