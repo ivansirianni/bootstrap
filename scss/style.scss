@@ -1,0 +1,229 @@
+@import "./variables";
+
+/*--- RESET ---*/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-principal;
+    background-color: $alternative;
+   
+}
+.main__container{
+    background-image: url(../sources/stars.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+/*HEADER*/
+
+.navbar{
+    background-color: $alternative;
+    &__img{
+        width: 20%;
+        margin-left: 30%;
+    }
+}
+/*FOOTER*/
+.footer{
+    display: grid;
+    grid-template-areas: "logo nav info";
+    background-color: $alternative;
+    &__img{
+        grid-area: logo;
+        width: 60%;    
+        justify-self: center;
+        align-self: center;
+    }
+    &__nav{
+        grid-area: nav;
+        align-self: center;
+        justify-self: center;
+    }
+    &__info{
+        grid-area: info;
+        align-self: center;
+        justify-self: center;
+        width: auto;
+    }
+    &__info h5{
+        color: $secondary;
+        text-align: center;
+        font-size: $text-medium;
+    }
+    &__info ul{
+        list-style-type: none;
+    }
+    &__info li{
+        text-decoration: none;    
+        color: $secondary;
+        padding: $spacing-xsmall;
+        font-size: $text-small;
+    }
+}
+/* CARDS*/
+.cards h1{
+    text-align: center;
+    color: $secondary;
+    padding: $spacing-large;
+    font-size: $text-large;
+    font-weight: bold;
+    font-family: $font-title;
+    
+}
+.cards__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: $spacing-medium;
+}
+.derechos{
+    text-align: center;
+    color: $secondary;
+    font-style: italic;
+    padding: $spacing-medium;
+    font-size: $text-small;
+}
+/*pagina REGISTRO*/
+.registro__container{
+    background-image: url(../sources/vader.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    & h1{
+        text-align: center;
+        color: $secondary;
+        padding: $spacing-large;
+        font-size: $text-large;
+        font-weight: bold;
+        font-family: $font-title;        
+    }
+}
+.registro{ 
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: $secondary;
+    font-size: $text-small; 
+    text-shadow: black 0.1em 0.1em 0.2em;   
+}
+.force{
+    text-align: center;
+    color: $primary;
+    font-size: $text-small;
+    font-style: italic;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+/*seccion videos*/
+.video__container{
+    background-image: url(../sources/obiwankenobi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    & h1{
+        text-align: center;
+        color: $secondary;
+        padding: $spacing-small;
+        font-size: $text-large;
+        font-weight: bold;
+        font-family: $font-title;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    & h3{
+        text-align: center;
+        color: $secondary;
+        padding: $spacing-xsmall;    
+        font-size: $text-medium;
+        font-weight: bold;
+        font-family: $font-title;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        margin-top: 10%;
+    }
+    & p{
+        text-align: center;    
+        color: $secondary;
+        font-size: $text-small; 
+        text-shadow: black 0.1em 0.1em 0.2em;  
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+.peli__h1{
+    text-align: center;
+    color: $secondary;
+    padding: $spacing-small;
+    font-size: $text-large;
+    font-weight: bold;
+    font-family: $font-title;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.card{
+    background: transparent;
+    border: none;
+    &-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+
+/* media query 480px min a 768 max */
+@media screen and (min-width: 480px){
+    .footer{
+        &__img{
+            width: 20vw;
+        }
+        &__info h5{        
+            font-size: $text-m;
+        }
+        &__info li{
+            font-size: $text-xs;
+        }
+    }    
+    .cards h1{        
+        font-size: $text-l;
+    }
+    .derechos{        
+        font-size: $text-s;
+    }
+    .registro__container{
+        & h1{
+            font-size: $text-l;
+        }
+    }    
+    .registro{        
+        font-size: $text-s;
+    }
+    .force{
+        font-size: $text-s;
+    }
+    .video__container{
+        & h1{
+            font-size: $text-l;
+        }
+        & h3{
+            font-size: $text-m;
+        }
+        & p{
+            font-size: $text-s;
+        }
+    }    
+    .peli__h1{
+        font-size: $text-xm;
+    }
+    
+}
